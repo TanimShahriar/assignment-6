@@ -44,8 +44,9 @@ const handleCardVideo = async (cardId) => {
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
+    <a class="relative" href="#">
       <img class="rounded-t-lg h-60 w-full" src="${video.thumbnail}" />
+      <p class=" text-white ml-72 absolute bottom-6">${video.others.posted_date}</p>
     </a>
     <div class="p-5">
       <div class="flex flex-start gap-4 " >
@@ -56,14 +57,15 @@ const handleCardVideo = async (cardId) => {
       </div>
       <div class="flex justify-between">
       <p class="mb-3 ml-14 font-normal text-gray-700 dark:text-gray-400">${video.authors[0].profile_name}</p>
-      <img src="img/verified.svg">
-      </div>
-
+      <p class="mb-3 ml-14 font-normal text-gray-700 dark:text-gray-400">${video.authors[0]?.verified ? (`<img src="img/verified.svg">`) : ""}</p>
       
-   <p class="ml-14">${video.others.views}</p>
-    </div>
-  </div>
-    `;
+      </div >
+
+
+  <p class="ml-14">${video.others.views}</p>
+    </div >
+  </div >
+  `;
     cardContainer.appendChild(div);
   })
 }
