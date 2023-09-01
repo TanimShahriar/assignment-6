@@ -5,9 +5,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="container mx-auto mt-10">
+
+  <div class="collapse collapse-arrow bg-green-500">
+    <input type="radio" name="my-accordion-2" checked="checked" />
+    <div class="collapse-title text-xl font-medium">
+      Discuss the scope of var, let, and const
+    </div>
+    <div class="collapse-content">
+      <p><span class="text-xl font-semibold">1. var:</span>
+        Variables declared with var have function scope or global scope, but not block scope. This means that var
+        variables are accessible throughout the entire function in which they are declared, or globally if declared
+        outside of any function. <br> <br>
+
+        <span class="text-xl font-semibold">2. let:</span>
+        Variables declared with let have block scope, meaning they are accessible only within the block where they are
+        declared. <br> <br>
+
+        <span class="text-xl font-semibold">3. const:</span>
+        Variables declared with const also have block scope like let. However, const variables are constants and cannot
+        be reassigned after they are defined.
+      </p>
+    </div>
+  </div>
+  <div class="collapse collapse-arrow bg-green-500 my-10">
+    <input type="radio" name="my-accordion-2" />
+    <div class="collapse-title text-xl font-medium">
+      Tell us the use cases of null and undefined
+    </div>
+    <div class="collapse-content">
+      <p> <span class="text-xl font-semibold">1. null:</span>
+        Explicit Absence of Value: null is often used to explicitly indicate that a variable or object property has no
+        value.
+        Resetting Values: You can assign null to a variable or object property to indicate that it should no longer hold
+        its current value. it's good practice to use null when we want to explicitly represent the absence of a value or
+        indicate that a value has been intentionally removed or reset. <br> <br>
+        <span class="text-xl font-semibold">2. undefined:</span> <br>
+        Uninitialized Variables: When a variable is declared but not assigned a value, it has an undefined value by
+        default. <br>
+        Missing Object Properties: When you try to access an object property that doesn't exist, the result is
+        undefined. <br>
+        Function Parameters: If a function is called with fewer arguments than expected, the missing parameters are
+        undefined. <br>
+        Implicit Return Value: If a function doesn't explicitly return a value, it returns undefined. <br>
+        Falsy Value: undefined is considered a falsy value in JavaScript.
+      </p>
+    </div>
+  </div>
+  <div class="collapse collapse-arrow bg-green-500">
+    <input type="radio" name="my-accordion-2" />
+    <div class="collapse-title text-xl font-medium">
+      What do you mean by REST API?
+    </div>
+    <div class="collapse-content">
+      <p>REST API stands for "Representational State Transfer Application Programming Interface." It is a set of
+        conventions and architectural principles used for building and interacting with web services over the HTTP
+        protocol. REST APIs enable communication between different software systems, allowing them to request and
+        exchange data in a standardized way. <br> <br>
+
+        Key characteristics of REST APIs include: <br> <br>
+
+        <span class="text-xl font-semibold">1. Statelessness:</span> Each API request from a client to the server must
+        contain all the information needed to understand and process the request. The server doesn't store any client
+        state between requests. This makes REST APIs scalable and easy to cache. <br>
+
+        <span class="text-xl font-semibold"> Resources:</span> 2. REST APIs are built around the concept of resources,
+        which are identified by unique URLs (Uniform Resource Locators). Resources can be any kind of data, such as user
+        profiles, products, or blog posts. <br>
+
+        <span class="text-xl font-semibold">3. HTTP Methods:</span> REST APIs use standard HTTP methods (verbs) to
+        indicate the type of operation to be performed on a resource. The most common methods are:
+        - GET: Retrieve data from the server.
+        - POST: Create new data on the server.
+        - PUT: Update data on the server.
+        - DELETE: Remove data from the server. <br>
+
+        <span class="text-xl font-semibold">4. HTTP Status Codes:</span> REST APIs use standard HTTP status codes to
+        indicate the outcome of a request. For example, 200 OK for a successful response, 404 Not Found for a missing
+        resource, and 500 Internal Server Error for server-related errors. <br>
+
+        <span class="text-xl font-semibold">5. Uniform Interface:</span> REST APIs follow a uniform interface, which
+        means that regardless of the application, the principles of handling resources are consistent. <br>
+
+        <span class="text-xl font-semibold">6. Hypermedia as the Engine of Application State (HATEOAS):</span> This
+        principle suggests that a client should be able to navigate through the API using hyperlinks provided in the
+        responses. This allows the API to evolve without requiring clients to change. <br>
+
+        <span class="text-xl font-semibold">7. Content Negotiation:</span> Clients and servers can negotiate the format
+        of data being exchanged. Common formats include JSON (JavaScript Object Notation) and XML (eXtensible Markup
+        Language). <br> <br>
+
+        REST APIs are widely used for building web applications, mobile apps, and other distributed systems. They
+        provide a standardized way for different applications to communicate, enabling interoperability and decoupling
+        between client and server components. Many modern web services, including social media platforms, e-commerce
+        sites, and cloud services, expose RESTful APIs for developers to interact with their data and services.
+      </p>
+    </div>
+  </div>
+
 
 </body>
 
