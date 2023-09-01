@@ -39,11 +39,31 @@ const handleCardVideo = async (cardId) => {
   const cardContainer = document.getElementById('cardContainer');
   cardContainer.textContent = '';
 
+
+  if (cardData.length === 0) {
+    const noData = document.createElement('div');
+    noData.innerHTML = `
+    <div class="card md:ml-[250px] lg:ml-[600px] md:mt-30 lg:mt-40 w-full bg-base-100 ">
+    <figure class="px-10 pt-10">
+      <img src="img/Icon.png" alt="Shoes" class="rounded-xl" />
+    </figure>
+    <div class="card-body items-center text-center">
+      
+      <p class="text-2xl font-bold">Oops!! Sorry, There is no content here</p>
+      
+    </div>
+  </div>
+    
+    `;
+    cardContainer.appendChild(noData);
+    return;
+  }
+
   cardData.forEach((video) => {
     console.log(video);
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a class="relative" href="#">
       <img class="rounded-t-lg h-60 w-full" src="${video.thumbnail}" />
       <p class=" text-white ml-72 absolute bottom-6">${video.others.posted_date}</p>
@@ -71,3 +91,13 @@ const handleCardVideo = async (cardId) => {
 }
 
 handleCardVideo('1000')
+
+
+// Blog button
+const blogButton = document.getElementById('blogButton');
+
+blogButton.addEventListener('click', () => {
+  const blogUrl = 'blog.html';
+  window.open(blogUrl, '_blank');
+});
+
